@@ -6,6 +6,7 @@ resource "alicloud_nat_gateway" "this" {
   description   = "A Nat Gateway created by terraform-alicloud-modules/nat-gateway"
 
   instance_charge_type = var.instance_charge_type
+  internet_charge_type = var.internet_charge_type
   period               = var.period
   nat_type             = var.nat_type
 }

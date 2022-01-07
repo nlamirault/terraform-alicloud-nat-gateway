@@ -69,6 +69,12 @@ variable "instance_charge_type" {
   default     = "PostPaid"
 }
 
+variable "internet_charge_type" {
+  description = "The internet charge type."
+  type        = string
+  default     = "PayByLcu"
+}
+
 variable "period" {
   description = "The charge duration of the PrePaid nat gateway, in month."
   type        = number
