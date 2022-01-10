@@ -99,6 +99,12 @@ variable "description" {
   default     = "A nat gateway create by terraform module terraform-alicloud-nat-gateway"
 }
 
+variable "nat_tags" {
+  description = "A mapping of tags to assign to the NAT Gateway resource."
+  type        = map(string)
+  default     = {}
+}
+
 ########################
 # New EIP parameters
 ########################

@@ -10,6 +10,12 @@ resource "alicloud_nat_gateway" "this" {
   internet_charge_type = var.internet_charge_type
   period               = var.period
   nat_type             = var.nat_type
+  tags = merge(
+    {
+      Name         = var.name
+      InstanceType = var.nat_type
+    }, var.nat_tags
+  )
 }
 
 locals {
