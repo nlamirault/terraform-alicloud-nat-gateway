@@ -4,7 +4,8 @@ resource "alicloud_nat_gateway" "this" {
   name          = var.name
   specification = var.specification
   description   = "A Nat Gateway created by terraform-alicloud-modules/nat-gateway"
-
+  
+  vswitch_id           = var.vswitch_id
   instance_charge_type = var.instance_charge_type
   internet_charge_type = var.internet_charge_type
   period               = var.period

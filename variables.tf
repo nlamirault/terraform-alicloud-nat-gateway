@@ -39,6 +39,12 @@ variable "vpc_id" {
   default     = ""
 }
 
+variable "vswitch_id" {
+  description = "The id of VSwitch."
+  type        = string
+  default     = ""
+}
+
 variable "name" {
   description = "Name of a new nat gateway."
   type        = string
