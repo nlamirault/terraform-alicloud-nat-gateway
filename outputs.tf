@@ -1,15 +1,15 @@
-locals {
-  this_dnat_table_id           = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.forward_table_id, [""])[0] : ""
-  this_snat_table_id           = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.snat_table_id, [""])[0] : ""
-  this_nat_gateway_spec        = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.spec, [""])[0] : ""
-  this_nat_gateway_name        = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.name, [""])[0] : ""
-  this_nat_gateway_status      = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.status, [""])[0] : ""
-  this_nat_gateway_description = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.description, [""])[0] : ""
-}
+# locals {
+#   this_dnat_table_id           = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.forward_table_id, [""])[0] : ""
+#   this_snat_table_id           = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.snat_table_id, [""])[0] : ""
+#   this_nat_gateway_spec        = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.spec, [""])[0] : ""
+#   this_nat_gateway_name        = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.name, [""])[0] : ""
+#   this_nat_gateway_status      = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.status, [""])[0] : ""
+#   this_nat_gateway_description = local.this_nat_gateway_id != "" ? concat(data.alicloud_nat_gateways.this.gateways.*.description, [""])[0] : ""
+# }
 
-data "alicloud_nat_gateways" "this" {
-  ids = local.this_nat_gateway_id != "" ? [local.this_nat_gateway_id] : null
-}
+# data "alicloud_nat_gateways" "this" {
+#   ids = local.this_nat_gateway_id != "" ? [local.this_nat_gateway_id] : null
+# }
 
 # output "this_nat_gateway_id" {
 #   description = "The nat gateway id."
